@@ -1,0 +1,983 @@
+/***********************************************
+*                                              *
+*                Générale                      *
+*                                              *
+************************************************/
+*
+{
+    font-family: "Raleway", "sans-serif";
+    box-sizing: border-box;
+    padding: 0px;
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+
+
+.titre2
+{
+    font-size: 22px;
+}
+
+.titre3
+{
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0;
+}
+
+.paragraphe
+{
+   font-size: 14px;
+   margin: 0;
+}
+
+a
+{
+    font-size: 16px;
+    text-decoration: none;
+    color: black;
+}
+
+/***********************************************
+*                                              *
+*                Logo + onglets                *
+*                                              *
+************************************************/
+.nav
+{
+    display: flex;
+    justify-content:space-between;
+}
+
+.nav .logo
+{
+    width: 60px;
+    height: 20px;
+    margin: 50px 0 0 55px;
+}
+
+.nav .onglets                            
+{
+    display: flex;
+    list-style-type: none;
+    min-width: 300px;
+    margin-right: 0;
+}
+
+.nav .onglets .onglet
+{
+    text-align: right;
+    padding: 50px 50px;
+    border-top: 2px solid transparent;
+    width: 50%;
+}
+
+.nav .onglets .onglet:hover                          /* au passage de la souris */
+{                   
+    border-color:  #0065FC;
+    color: #0065fc;
+}
+
+.nav .onglets .onglet:hover a                   
+{                   
+   color: #0065fc;
+}
+
+/********************************************************
+*                                                       *
+*               Titre + barre de recherche              *
+*                                                       *
+********************************************************/
+
+.main .trouver .titre2
+{
+    padding-left: 55px;
+}
+
+.soustitre
+{
+    font-size: 16px;
+    padding-left: 55px;
+    padding-top: 15px;
+}
+
+.boite-de-recherche 
+{
+    display: flex;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-left: 55px;
+    margin: 0;
+    width: calc(100% - 20px);
+}  
+
+.boite-de-recherche .position
+{
+    display: flex;
+    align-items: center;
+    background-color: #F2F2F2;
+    border: 1px solid #F2F2F2;
+    height: 50px;
+    width: 50px;
+    border-radius: 15px 0px 0px 15px;
+    margin: 0;
+}
+
+.boite-de-recherche .fa-location-dot           /* icone position*/
+{
+    font-size: 18px;
+}
+
+.boite-de-recherche .input
+{
+    padding: 10px;
+    font-size: 18px;
+    border: 1px solid #D9D9D9;
+    font-weight: bold;
+}
+
+.input::placeholder                /* police zone de recherche en noire par défault */
+{
+    color:black;
+    font-weight: bold;
+}
+
+::-moz-placeholder                 /* Mozilla Firefox 19+ */
+{ 
+   color:    #666;
+   opacity:  1;
+}
+
+.boite-de-recherche .bouton
+{
+    margin-left: -20px;            /*bouton collé  version portable! */
+    padding: 15px;
+    background-color: #0065FC;
+    color: white;
+    font-size: 18px;
+    border-radius: 0px 15px 15px 0px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.boite-de-recherche .bouton:active
+{
+    background-color:#DEEBFF;
+    color: #0065FC;
+}
+
+.boite-de-recherche .bouton:hover
+{
+    box-shadow: 0px 2px 2px 2px  #4c4c4c;
+}
+
+.boite-de-recherche .bouton .fa-magnifying-glass
+{ 
+    display: none;
+}
+
+/**********************************************************************
+*                                                                     *
+*                               Filtres :                             *
+*                                                                     *
+***********************************************************************/
+
+.boites-de-filtres
+{
+    display: flex;
+    align-items: center;          /* alignement sur la même ligne */
+    padding-top: 30px;
+    padding-left: 55px;
+    margin-bottom: 10px;
+    gap: 2%;
+}
+
+.boites-de-filtres .titre2
+{
+    font-size: 18px;
+    margin: 0;
+}
+
+.boites-de-filtres .texte
+{
+    justify-items: center;
+    white-space: nowrap;
+    font-size: 17px;
+    font-weight: bold;
+    margin-right: 30px;
+}
+
+.boites-de-filtres .filtres
+{
+    display: flex;
+    align-items: center;
+    border: 2px solid #D9D9D9;
+    border-radius: 30px;
+    cursor: pointer;
+    margin: 0;
+}
+
+.boites-de-filtres .icone 
+{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    font-size: 25px;
+    color: #0065FC;
+    max-height: 50px;
+    min-height: 50px;
+    max-width: 50px;
+    min-width: 50px;
+    cursor: pointer;
+}
+
+.boites-de-filtres .filtres:hover
+{
+    box-shadow: 0px 5px 5px 0px  #4c4c4c;
+}
+
+.boites-de-filtres .filtres:active
+{
+    background-color:  #DEEBFF; 
+}
+
+/********************
+*                   *
+*      info         *
+*                   *
+*********************/
+
+.info
+{
+    display: flex;
+    align-items: center;
+    padding-top: 30px;
+    padding-left: 55px;
+    margin-left: 0;
+    width: 85%;
+}
+
+.info .fa-info
+{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 16px;
+    max-height: 24px;
+    min-height: 24px;
+    max-width: 24px;
+    min-width: 24px;
+    border-radius: 50%;
+    border:2px solid #F2F2F2;
+    color: #0065FC;
+    padding-bottom: 5px;
+    margin: 0 20px 0 0;
+}
+
+.info .article
+{
+    font-size: 18px;
+    font-weight: normal;
+    margin: 0;
+}
+
+/*******************************************************************
+*                                                                  *
+*                          Hébergements                            *
+*                                                                  *
+********************************************************************/
+
+.hebergement
+{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 30px;
+    padding-right: 30px;
+    padding-left: 30px;
+    margin-left: 0;
+    width: 100%;
+    
+}
+
+.hebergement .titre2
+{
+    margin-bottom: 20px;
+    width: 90%;
+    margin-left: 0;
+}
+
+.hebergement .container
+{
+    background-color: #F2F2F2;
+    padding: 20px;
+    border-radius: 20px;
+    height: calc(100% - 30px);
+    box-sizing: content-box;
+}
+
+.hebergement .liste
+{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.hebergement .liste a
+{
+    width: 32%;
+    margin-bottom: 20px;
+    margin-left: 0;
+    margin-right: 0;
+}
+
+.hebergement .liste a .article
+{
+    background-color: white;
+    border-radius: 25px;
+    line-height: 25px;
+}
+
+.hebergement .liste a .article .photo
+{
+    padding: 5px;
+}
+
+.hebergement .euro
+{
+    font-weight: bold;
+}
+
+.hebergement .liste a .article .contenue
+{
+    padding-left: 10px;
+}
+
+.hebergement .liste a .article .contenue .etoile
+{
+    font-size: 12px;
+    margin-left: 0;
+}
+
+.hebergement .icon[data-active=true] 
+{
+    color: #0065FC;
+}
+
+.hebergement .icon[data-active=false] 
+{
+    color: #F2F2F2;
+}
+
+.hebergement .liste a .article:hover 
+{
+    box-shadow: 0px 5px 5px 0px #4c4c4c;
+}
+
+/*******************************************************************
+*                                                                  *
+*                         Marseille                                *
+*                                                                  *
+********************************************************************/
+
+.hebergement .marseille
+{
+    width: 65%;
+}
+
+
+
+.hebergement .marseille .photo
+{
+    width: 100%;
+    height: 110px;
+    border-radius: 25px 25px 0px 0px;
+    object-fit: cover;
+}
+
+.hebergement .marseille .article
+{
+    box-shadow: 0px 0px 10px 0px #a5a5a5;
+}
+
+.afficher
+{
+    font-size: 18px;
+    padding-top: 50px;
+    padding-left: 20px;
+}
+
+/*******************************************************************
+*                                                                  *
+*                          Polulaires                              *
+*                                                                  *
+********************************************************************/
+
+.hebergement .populaire 
+{
+    width: 30%;
+}
+
+.hebergement .populaire .liste 
+{
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.hebergement .populaire .liste a 
+{
+    width: 100%;
+    margin-bottom: 15px;
+}
+
+.hebergement .populaire .liste a .article 
+{
+    display: flex;
+    flex-direction: row;
+    height: 145px;
+}
+
+.hebergement .populaire .liste a .article .carton
+{
+    display: flex;
+    flex-wrap: wrap;
+    width: 60%;
+}
+
+.hebergement .populaire .photo
+{
+    border-radius: 25px 0px 0px 25px;
+    width: 40%;
+    object-fit: cover;
+}
+
+.hebergement .populaire .liste a .article .contenue 
+{
+    padding: 10px 15px 0px 5px;
+    margin: 0;
+    height: 120px;
+    line-height: 20px;
+}
+
+.hebergement .populaire .icone
+{
+    display: flex;
+}
+
+.hebergement .populaire .icone .fa-chart-line
+{
+    font-size: 18px;
+    padding-top: 5px;
+    color: #0065FC;
+}  
+
+.hebergement .populaire .article .etoile
+{
+    padding-left: 5px;
+    font-size: 12px;
+    margin:0;
+}
+
+.hebergement .populaire .liste a .article:hover 
+{
+    box-shadow: 0px 5px 5px 0px #4c4c4c;
+}
+
+/*******************************************************************
+*                                                                  *
+*                       Activité                                   *
+*                                                                  *
+********************************************************************/
+
+.activite .titre2
+{
+    margin-top: 50px;
+    margin-bottom: 30px;
+    padding-left: 55px;
+}
+
+.activite .liste 
+{
+    display: flex;
+    justify-content: space-around;
+    padding-left: 30px;
+    padding-right: 30px;
+}
+
+.activite .liste .colonne 
+{
+    width: 22%;
+    border-radius: 25px;
+}
+
+.activite .liste .colonne .article 
+{
+    box-shadow: 0px 0px 10px 0px #E0E0E0;
+    border-radius: 25px;
+}
+
+.activite .liste .colonne .article .photo
+{
+    object-fit: cover;
+    border-radius: 25px 25px 0 0;
+    width: 100%;
+    height: 400px;
+}
+
+.activite .liste .colonne .article .contenue 
+{
+    height: 65px;
+}
+
+.activite .liste .colonne .article .contenue .titre3 
+{
+    padding: 15px;
+}
+
+.activite .liste .colonne .article:hover
+{
+    box-shadow: 0px 5px 5px 0px #4c4c4c;
+}
+
+/************************************
+*              Footer               *
+************************************/
+
+footer 
+{
+    display: flex;
+    background-color: #F2F2F2;
+    margin: 50px 50px 0 50px;
+    padding: 60px 60px 58px 60px;
+}
+
+footer .colonne 
+{
+    width: 35%;
+}
+
+.colonne .titre3
+{
+    font-size: 18px;
+    padding-bottom: 15px;
+}
+
+footer .colonne p
+{
+    font-size: 16px;
+}
+
+footer .colonne ul 
+{
+    list-style-type: none;
+}
+
+footer .colonne ul li a
+{
+    color: black;
+    text-decoration: none;
+    line-height: 30px;
+}
+
+/********************************************************
+*                                                       *
+*        TITRE + BARRE DE RECHERCHE (tablette)          *
+* *******************************************************
+********************************************************/
+
+@media all and (max-width: 992px)
+{
+    
+    .boites-de-filtres
+    {
+        flex-wrap: nowrap;
+        gap: 2px;
+    }
+    
+    .boites-de-filtres .texte
+    {
+        margin-right: 5px;
+    }
+    
+    .hebergement
+    {
+        flex-wrap: wrap;
+        width: 100%;
+        padding-left: 50px;
+        padding-right: 50px;
+    }
+    
+    .hebergement .marseille
+    {   
+        width: 100%;
+    }
+    
+    .hebergement .populaire 
+    {
+        width: 100%;
+        margin-top: 50px;
+    }
+    
+    .hebergement .populaire .titre2
+    {
+        margin-left: 15px;
+    }
+    
+    .hebergement .populaire .liste 
+    {
+       flex-direction: row;
+       margin: 0;
+    }
+    
+    .hebergement .populaire .container
+    {
+        padding: 20px 10px 20px 10px;
+    }
+
+    .hebergement .populaire .liste a
+    {
+        width: 32%;
+    }
+    
+    .hebergement .populaire .article
+    {
+        display: flex;
+    }
+    
+    .activite .colonne .titre3
+    {
+        font-size: 16px;
+    }
+    
+    footer 
+    {
+        padding: 20px 20px 0 20px;
+    }
+    
+}
+
+/********************************************************
+*                                                       *
+*        TITRE + BARRE DE RECHERCHE (portable)          *
+* *******************************************************
+********************************************************/
+@media all and (max-width: 768px)
+{
+    header
+    {
+        flex-direction: column;
+    }
+    
+    .nav
+    {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 30px;
+        margin-left: 0;
+        padding: 0;
+    } 
+    
+    .nav .logo                           /* logo X2 */
+    {
+        width: 30%;
+        height: auto;
+        margin: auto;
+    }
+    
+    .nav .onglets
+    {
+        width: 100%;
+    }
+    
+    .nav .onglets .onglet
+    {   
+        width: 100%;
+        text-align: center;
+        justify-content: space-around;
+        border-top: none;
+        border-bottom: 2px solid grey;
+        font-size: 32px;
+    }
+   
+    .main .trouver .titre2
+    {
+        margin-top: 70px;
+        padding-left: 20px;
+    }
+
+    .soustitre
+    {
+        padding-left: 20px;
+    }
+    
+    .titre3
+    {
+        width: 70%;
+    }
+    
+    .boite-de-recherche
+    {
+        padding-top: 36px;
+        padding-left: 20px;
+    }
+   
+    .boite-de-recherche .input
+    {
+        width: 85%;
+    }
+    
+    .boite-de-recherche .bouton
+    {
+        border-radius: 15px;
+    }
+    
+    .boite-de-recherche .bouton .rechercher
+    {
+        display: none;
+    }
+    
+    .boite-de-recherche .bouton .fa-magnifying-glass
+    { 
+       display: contents;
+    }
+    
+    .boites-de-filtres
+    {
+        flex-wrap: wrap;
+        padding-left: 20px;
+        width: 100%;
+        gap: 2%;
+    }
+    
+    .boites-de-filtres .icone 
+    {
+        margin: 0;
+    }
+    
+    .boites-de-filtres .texte
+    {
+        margin: 20px 0 20px 0;
+        height: 10px;
+        padding-bottom: 20px;
+    }
+    
+    .boites-de-filtres .titre2
+    {
+        width: 100%;
+        padding-bottom: 20px;   
+    }
+    
+    .boites-de-filtres .filtres
+    {
+        width: 45%;
+        min-width: 220px;
+        margin-top: 25px
+    }
+    
+    .info
+    {
+        padding-left: 20px;
+    }
+    
+    .hebergement 
+    {
+        flex-wrap: wrap;
+        padding-left: 0px;
+        padding-right: 0px;
+    }
+    
+    .hebergement .container
+    {
+        border-radius: 0;
+    }
+    
+    .hebergement .titre2
+    {
+        margin: 0;
+    }
+
+    .hebergement .populaire 
+    {
+        order: 1;
+        width: 100%;
+    }
+    
+    .hebergement .marseille 
+    {
+        order: 2;
+        width: 100%;
+    }
+    
+    .hebergement .populaire .container
+    {
+        margin-bottom: 30px;
+    }
+    
+    .hebergement .populaire .liste 
+    {
+        flex-direction: column;
+        justify-content: space-around;
+        padding-top: 25px;
+    }
+    
+    .hebergement .populaire .liste a
+    {
+        width: 100%;
+        margin-bottom: 10px;
+    }
+    
+    .hebergement .populaire .liste a .article 
+    {
+        display: flex;
+        flex-direction: row;
+        height: 145px;
+        margin-bottom: 20px;
+    }
+    
+    .hebergement .populaire .liste a .article .photo
+    {
+        min-width: 40%;
+        max-width: 40%;
+    }
+    
+    .hebergement .populaire .liste a .article .carton
+    {
+        width: 100%;
+        height: 130px;
+    }
+    
+    .hebergement .populaire .liste a .article .carton .contenue
+    {
+        width: 100%;
+    }
+    
+    .hebergement .marseille .titre2
+    {
+        margin-bottom: 20px;
+    }
+    
+    .hebergement .marseille .container 
+    {
+        background-color: white;
+    }
+    
+    .hebergement .marseille .liste 
+    {
+        flex-direction: column;
+    }
+    
+    .hebergement .marseille .liste a
+    {
+        width: 100%;
+    }
+    .hebergement .marseille .liste a .article
+    {
+        height: 200px;
+        line-height: 20px;
+    }
+    .hebergement .marseille .photo
+    {
+        height: 125px;
+    }
+    
+    .hebergement .marseille .contenue
+    {
+       padding-left: 10px 0 10px 10px;
+    }
+    
+    .afficher
+    {
+        display: none;
+    }
+    
+    .activite .titre2
+    {
+        margin-bottom: 40px;
+        padding-left: 30px;
+    }
+    
+    .activite .liste 
+    {
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin-bottom: 50px;
+    }
+    
+    .activite .liste .colonne 
+    {
+        width: 100%;
+    }
+   
+    .activite .liste .colonne .article 
+    {
+        height: 300px;
+        margin-bottom: 40px;
+    }
+    
+    .activite .colonne .titre3 
+    {
+        padding-top: 20px;
+    }
+    
+    .activite .liste .colonne .article .photo
+    {
+       height: calc(100% - 60px); 
+    }
+    
+    footer
+    {
+        flex-direction: column;
+        width: 100%;
+        padding-bottom: 200px;
+        margin: 0;
+        padding: 0;
+    }
+    
+    footer .colonne
+    {
+        width: 100%;
+        padding-left: 30px;
+    }
+    
+    footer .colonne .titre3
+    {
+        padding-top: 80px;
+    }
+}
+/********************************************************
+*                                                       *
+*        TITRE + BARRE DE RECHERCHE (portable)          *
+* *******************************************************
+********************************************************/
+@media all and (max-width: 370px)
+{
+
+    .nav .onglets
+    {
+        display: block; 
+    }
+}   
+
+
+        
+    
+    
+
+
+    
+    
+    
+    
+    
+    
+   
+
+        
+    
+    
+
+
