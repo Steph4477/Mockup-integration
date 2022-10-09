@@ -948,21 +948,6 @@ footer .colonne ul li a
         padding-top: 80px;
     }
 }
-/********************************************************
-*                                                       *
-*        TITRE + BARRE DE RECHERCHE (portable)          *
-* *******************************************************
-********************************************************/
-@media all and (max-width: 370px)
-{
-
-    .nav .onglets
-    {
-        display: block; 
-    }
-}   
-
-
         
     
     
