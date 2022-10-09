@@ -50,6 +50,11 @@ a
     justify-content:space-between;
 }
 
+.nav a 
+{
+    width: 100%;
+    margin: 0;
+}
 .nav .logo
 {
     width: 60px;
@@ -674,12 +679,16 @@ footer .colonne ul li a
     
     .nav
     {
-        display: flex;
-        flex-wrap: wrap;
-        margin-top: 30px;
-        margin-left: 0;
-        padding: 0;
+       flex-wrap: wrap;
+       width: 100%;
     } 
+    
+    .nav a
+    {
+        width: 100%;
+        margin: 0;
+        font-size: 12px;
+    }
     
     .nav .logo                           /* logo X2 */
     {
