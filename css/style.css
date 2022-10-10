@@ -843,7 +843,6 @@ footer .colonne ul li a
     .hebergement .populaire .liste a
     {
         width: 100%;
-        margin-bottom: 10px;
     }
     
     .hebergement .populaire .liste a .article 
@@ -851,7 +850,7 @@ footer .colonne ul li a
         display: flex;
         flex-direction: row;
         height: 145px;
-        margin-bottom: 20px;
+        margin-bottom: 10px;
     }
     
     .hebergement .populaire .liste a .article .photo
@@ -889,7 +888,9 @@ footer .colonne ul li a
     .hebergement .marseille .liste a
     {
         width: 100%;
+        margin-bottom: 30px;
     }
+    
     .hebergement .marseille .liste a .article
     {
         height: 200px;
@@ -920,7 +921,7 @@ footer .colonne ul li a
     {
         flex-wrap: wrap;
         justify-content: space-between;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
     }
     
     .activite .liste .colonne 
@@ -931,7 +932,7 @@ footer .colonne ul li a
     .activite .liste .colonne .article 
     {
         height: 300px;
-        margin-bottom: 40px;
+        margin-bottom: 30px;
     }
     
     .activite .colonne .titre3 
@@ -950,7 +951,7 @@ footer .colonne ul li a
         flex-direction: column;
         width: 100%;
         margin: 0;
-        padding: 0 0 70px 0;
+        padding: 0px 0 60px 0;
     }
     
     footer .colonne
@@ -961,7 +962,7 @@ footer .colonne ul li a
     
     footer .colonne .titre3
     {
-        padding-top: 80px;
+        padding-top: 40px;
     }
 }
         
