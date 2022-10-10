@@ -142,6 +142,11 @@ a
     font-weight: bold;
 }
 
+.boite-de-recherche .input:focus
+{
+    outline: none;                 /* enlevement de la bordure entrée input */
+}
+
 .input::placeholder                /* police zone de recherche en noire par défault */
 {
     color:black;
@@ -156,7 +161,6 @@ a
 
 .boite-de-recherche .bouton
 {
-    margin-left: -20px;            /*bouton collé  version portable! */
     padding: 15px;
     background-color: #0065FC;
     color: white;
@@ -304,7 +308,6 @@ a
     padding-left: 30px;
     margin-left: 0;
     width: 100%;
-    
 }
 
 .hebergement .titre2
@@ -652,7 +655,10 @@ footer .colonne ul li a
     {
         display: flex;
     }
-    
+    .activite .liste .colonne .article .photo
+    {
+        height: 267px;
+    }
     .activite .colonne .titre3
     {
         font-size: 16px;
@@ -662,7 +668,6 @@ footer .colonne ul li a
     {
         padding: 20px 20px 0 20px;
     }
-    
 }
 
 /********************************************************
@@ -695,6 +700,7 @@ footer .colonne ul li a
         width: 30%;
         height: auto;
         margin: auto;
+        padding-top: 50px;
     }
     
     .nav .onglets
@@ -742,6 +748,7 @@ footer .colonne ul li a
     .boite-de-recherche .bouton
     {
         border-radius: 15px;
+        margin-left: -20px;            /*bouton collé  */
     }
     
     .boite-de-recherche .bouton .rechercher
@@ -934,16 +941,16 @@ footer .colonne ul li a
     
     .activite .liste .colonne .article .photo
     {
-       height: calc(100% - 60px); 
+        height: 135px;
+        height: calc(100% - 60px); 
     }
     
     footer
     {
         flex-direction: column;
         width: 100%;
-        padding-bottom: 200px;
         margin: 0;
-        padding: 0;
+        padding: 0 0 70px 0;
     }
     
     footer .colonne
