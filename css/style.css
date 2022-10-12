@@ -692,7 +692,6 @@ footer .colonne ul li a
     {
         width: 100%;
         margin: 0;
-        
     }
     
     .nav .logo                           /* logo X2 */
@@ -715,7 +714,6 @@ footer .colonne ul li a
         justify-content: space-around;
         border-top: none;
         border-bottom: 2px solid grey;
-        font-size: 32px;
     }
    
     .main .trouver .titre2
